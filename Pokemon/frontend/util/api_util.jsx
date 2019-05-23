@@ -5,3 +5,18 @@ export const fetchAllPokemon = () => {
         url: 'api/pokemon'
     });
 };
+
+export const fetchPokemon = (id) => {
+    return $.ajax({
+        method: 'get',
+        url: `api/pokemon/${id}`
+    });
+};
+
+export const createPokemon = (pokemonParams) => {
+    return $.ajax({
+        method: 'post',
+        url: `api/pokemon/`,
+        data: pokemonParams
+    });
+};
